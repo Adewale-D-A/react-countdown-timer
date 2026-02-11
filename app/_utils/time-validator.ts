@@ -43,7 +43,7 @@ export function timeValidator(startDateTime: Date, endDateTime: Date) {
   }
 
   if (isTimeActive) {
-    minutesToEnd = Math.floor((endTimeDifference * -1) / (1000 * 60));
+    minutesToEnd = endTimeDifference < 0 ?  Math.floor((endTimeDifference * -1) / (1000 * 60)): endTimeDifference;
   }
   return {
     is_slot_active: isTimeActive,
@@ -53,14 +53,14 @@ export function timeValidator(startDateTime: Date, endDateTime: Date) {
       years_to_start: yearsToStart,
       months_to_start: monthsToStart,
       days_to_start: daysToStart,
-      minutes_to_start: minutesToStart,
+      minutes_to_start: Math.abs(minutesToStart),
     },
     time_remaining_properties: {
-      minutes_to_end: minutesToEnd,
+      minutes_to_end: Math.abs(minutesToEnd),
     },
   };
 }
 
 
 
-export type TimeValidatatorT = ReturnType<typeof timeValidator>;
+export type TimeValidatorT = ReturnType<typeof timeValidator>;

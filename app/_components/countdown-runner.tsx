@@ -15,7 +15,7 @@ export default function CountdownRunner({
       )}
       {!isCompleted && (
         <>
-          <h1 className=" text-center">Countdown Runner</h1>
+          <h1 className=" text-center">Entry Allowed! Countdown Running</h1>
           <div className="flex gap-4 text-7xl font-bold justify-center items-center">
             {!isMainCountdownDone && (
               <div className="flex flex-col justify-center items-center">
