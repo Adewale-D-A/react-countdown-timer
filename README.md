@@ -1,6 +1,6 @@
-# Meeting Video Timer & Logic Unit Tests
+# Meeting Video Timer
 
-This project provides a reusable video timer logic built with Next.js, and TypeScript. The intent of this project is to provide developers s custom approach to setting up a timer logic in codebases. The needs for this solution came when I needed to create a timer for a video meet feature taht monitors if a session is still in upcoming status, active or expired to prevent users from access and display appropriate info messages. It also comes with the feature to do a countdown based on start and end date-time range useful when the meeting is on the way and an additional source of information as to when the meeting would end in cases of times session. Also, unit test for time validation function and countdown hook.
+This project provides a client-side reusable video timer logic built with Next.js, and TypeScript.
 
 ---
 
@@ -8,12 +8,12 @@ This project provides a reusable video timer logic built with Next.js, and TypeS
 
 The following tools are required to run and maintain this project:
 
-| Package     | Purpose               |
-| ----------- | --------------------- |
-| Next.js     | Application framework |
-| TypeScript  | Static typing         |
-| Jest        | Unit tests            |
-| TailwindCSS | UI styling            |
+| Package       | Purpose                      |
+|---------------|------------------------------|
+| Next.js       | Application framework        |
+| TypeScript    | Static typing                |
+| Jest          | Unit tests                   |
+| TailwindCSS   | UI styling                   |
 
 A working knowledge of these tools is required for collaboration.
 
@@ -22,27 +22,20 @@ A working knowledge of these tools is required for collaboration.
 ## Local Development Setup
 
 1. Install dependencies:
-
 ```bash
 npm install
 ```
-
 2. Run unit tests:
-
 ```bash
 npm test
 ```
-
 3. Startup the application:
-
 ```bash
 npm run dev
 ```
-
 > The application will run on http://localhost:3000
 
 ## Folder Structure
-
 ```
 project-root/
 ├── app/
@@ -70,7 +63,6 @@ project-root/
 │   └── page.tsx                       # Application entry point
 │
 ├── public/
-│   └── next.svg
 │
 ├── .gitignore
 ├── CHANGELOG.md
@@ -87,7 +79,6 @@ project-root/
 ```
 
 ## Component Usage
-
 1. Render Timer View Component
 
 ```
@@ -141,8 +132,8 @@ CountdownRunner({
 });
 ```
 
-## Utility Funnction's Usage
 
+## Utility Funnction's Usage
 ```
 1. Calculate the time difference between time slot and current date-time
 

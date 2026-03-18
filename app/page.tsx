@@ -1,7 +1,8 @@
 import RenderCountdownComponent from "./_components/render-countdown-component";
 
-const startDateTime = new Date("2026-01-27T19:44:00.000Z"); 
-const endDateTime = new Date("2026-01-27T19:51:00.000Z"); 
+const startDateTime = new Date(new Date().getTime() + (1 * 60000)); //1 min ahead of current time
+const endDateTime = new Date(startDateTime.getTime() + (5 * 60000)); //5 minds ahead of current time
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center">
